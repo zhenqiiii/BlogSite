@@ -1,0 +1,16 @@
+# 前后端集中放置
+
+
+
+/frontend/package-lock.json
+# 忽略 frontend 目录下的构建产物和缓存文件
+/frontend/node_modules
+/frontend/dist
+/frontend/.env.local
+/frontend/.env.*.local
+/frontend/.output
+/frontend/.vitepress
+/frontend/.cache
+/frontend/.turbo
+/frontend/.DS_Store
+/frontend/.eslintcache

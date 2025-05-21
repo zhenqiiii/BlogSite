@@ -6,7 +6,7 @@ import '../assets/style/Home.css';
 
 // =========================顶部导航栏=====================================================
 
-
+// 文章卡片的间隔
 const article_gap = ref(20);
 // 页面变动时的处理函数
 const handleCurrentChange = (val) => {
