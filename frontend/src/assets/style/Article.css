@@ -1,0 +1,129 @@
+/* todo: 1. main&aside调整居中 2. 背景优化  完成*/
+.aside .el-row{
+  margin-bottom: 10px;
+}
+.aside .el-card{
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.name{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  /* border: 1px solid gray; */
+}
+
+/* 主界面文章卡片部分 */
+.articles_container{
+  width: 100%;
+  
+}
+.articles{
+
+}
+.article_card_header{
+  text-align: left;
+}
+
+
+/* container 容器样式*/
+
+.sub1{
+  justify-content: center;
+  height: 160vh;
+}
+
+
+/* container 内部组件样式 */
+.aside{
+  width: 25%;
+  min-width: 240px;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px 20px;
+}
+.main{
+  text-align: center;
+  border-radius: 8px;
+  margin: 10px;
+  width: 70%;
+  min-width: 800px;
+  max-width: 1000px;
+}
+.main, .aside{
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar{
+  /* width是8px的时候main里的滚动条不见了，直接隐藏吧 */
+  width: 0px;
+}
+
+/* 侧边栏卡片 */
+/* 分类 */
+.tag_container{
+    font-size: clamp(10px, 1vw, 16px);
+}
+.tag_container el-tag{
+    width: 100%;
+   
+
+}
+/* 续:主界面卡片 */
+.article_card{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
+/* header */
+.article_card_header {
+    /* border: 1px solid grey; */
+    
+}
+.article_title{
+    /* border: 1px solid grey; */
+    font-size: 1vw;
+}
+.title{
+    /* border: 1px solid grey; */
+    font-size: clamp(14px, 1.2vw, 20px);
+    text-align: left;
+}
+
+.date{
+    /* border: 1px solid grey; */
+    color: grey;
+    font-size: clamp(10px, 0.8vw, 16px);
+}
+
+/* body */
+.article_card_body{
+    /* border: 1px solid grey; */
+    text-align: left;
+    font-size: clamp(10px, 0.9vw, 16px);
+    color: darkgray;
+}
+.digest{
+    /* border: 1px solid grey; */
+    padding: 0;
+    margin: 0;
+}
+
+/* footer */
+.article_card_footer{
+    text-align: left;
+    /* border: 1px solid grey; */
+    font-size: clamp(10px, 0.8vw, 16px);
+    color: grey;
+}
+
+.tag{
+
+}
+.words_timespend{
+
+}

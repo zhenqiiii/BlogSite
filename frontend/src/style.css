@@ -1,0 +1,26 @@
+body {
+  background-color: darkgrey;
+  /* 保证整体组件和整个页面没有间隙 */
+  /* 将整个html文件和页面对应，然后body视作包裹所有元素的父元素，即包裹所有组件的部分 */
+  margin: 0;
+  /* 全局字体 */
+  font-family: 'Noto Serif SC', serif;
+  /* 设置背景图片 */
+  background: url(./assets/image/tree.jpg);
+  background-repeat: no-repeat;
+  /* fixed表示不会随页面滚动，即固定 */
+  background-attachment: fixed;
+  /* cover表示图片会覆盖整个页面 */
+  background-size: cover;
+
+}
+#app {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+

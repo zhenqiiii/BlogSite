@@ -1,0 +1,63 @@
+/* todo: 1. main&aside调整居中 2. 背景优化  完成*/
+
+
+/* 主界面文章卡片部分 */
+.articles_container{
+  width: 100%;
+  
+}
+.articles{
+
+}
+.article_card_header{
+  text-align: left;
+}
+
+/* 续:主界面卡片 */
+.article_card{
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
+/* header */
+.article_card_header {
+    /* border: 1px solid grey; */
+    
+}
+.article_title{
+    /* border: 1px solid grey; */
+    font-size: 1vw;
+}
+.title{
+    /* border: 1px solid grey; */
+    font-size: clamp(14px, 1.2vw, 20px);
+    text-align: left;
+}
+
+.date{
+    /* border: 1px solid grey; */
+    color: grey;
+    font-size: clamp(10px, 0.8vw, 16px);
+}
+
+/* body */
+.article_card_body{
+    /* border: 1px solid grey; */
+    text-align: left;
+    font-size: clamp(10px, 0.9vw, 16px);
+    color: darkgray;
+}
+.digest{
+    /* border: 1px solid grey; */
+    padding: 0;
+    margin: 0;
+}
+
+/* footer */
+.article_card_footer{
+    text-align: left;
+    /* border: 1px solid grey; */
+    font-size: clamp(10px, 0.8vw, 16px);
+    color: grey;
+}
+
+

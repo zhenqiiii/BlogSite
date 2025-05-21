@@ -1,0 +1,5 @@
+/* 滚动条样式 */
+::-webkit-scrollbar{
+  /* width是8px的时候main里的滚动条不见了，直接隐藏吧 */
+  width: 0px;
+}
