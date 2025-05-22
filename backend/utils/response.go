@@ -7,7 +7,7 @@ import (
 	"github.com/zhenqiiii/BlogSite/backend/constants"
 )
 
-// 正常响应封装函数
+// 成功响应封装函数
 func SuccessResponse(c *gin.Context, msg string, data interface{}) {
 	c.JSON(http.StatusOK, gin.H{
 		"code": constants.Success,
@@ -15,3 +15,8 @@ func SuccessResponse(c *gin.Context, msg string, data interface{}) {
 		"data": data,
 	})
 }
+
+// // 错误响应函数
+// func FailResponse (c *gin.Context, msg string, err error) {
+// 	c.JSON()
+// }

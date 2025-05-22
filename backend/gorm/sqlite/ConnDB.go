@@ -11,7 +11,7 @@ var db *gorm.DB
 
 // ConnDB:数据库连接函数
 func ConnDB() (err error) {
-	db, err = gorm.Open(sqlite.Open("Blog.db"), &gorm.Config{})
+	db, err = gorm.Open(sqlite.Open("gorm.db"), &gorm.Config{})
 	if err != nil {
 		return err
 	}
