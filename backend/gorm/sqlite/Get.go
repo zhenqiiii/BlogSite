@@ -68,3 +68,13 @@ func GetTagCount(tag string) (int, error) {
 	}
 	return int(result.RowsAffected), nil
 }
+
+// GetHistory：获取文章的id，标题和日期字段，并由用于渲染History组件
+func GetHistory() (list []model.DateParams, err error) {
+	// 指定Article表并使用gorm的智能选择字段机制取出想要的字段
+	result := db.Model(&model.Article{}).Find(&list)
+	if err = result.Error; err != nil {
+		return nil, err
+	}
+	return list, nil
+}
