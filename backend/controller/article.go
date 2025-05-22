@@ -19,7 +19,7 @@ func ArticleHandler() gin.HandlerFunc {
 		// 接收文章id参数:获取路径参数并转int64
 		id, _ := strconv.ParseInt(c.Param("id"), 10, 64)
 		// 业务逻辑:查询并获取
-		article, err := service.GetArticle(id)
+		article, err := service.GetArticleWithID(id)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{
 				"code": constants.InternalError,
