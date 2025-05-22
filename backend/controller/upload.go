@@ -23,7 +23,7 @@ func UploadHandler() gin.HandlerFunc {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"code": constants.FaultParams,
 				"msg":  "check the params again",
-				"err":  err,
+				"err":  err.Error(),
 			})
 			return
 		}
@@ -33,7 +33,7 @@ func UploadHandler() gin.HandlerFunc {
 			c.JSON(http.StatusInternalServerError, gin.H{
 				"code": constants.InternalError,
 				"msg":  "UploadArticle method",
-				"err":  err,
+				"err":  err.Error(),
 			})
 			return
 		}

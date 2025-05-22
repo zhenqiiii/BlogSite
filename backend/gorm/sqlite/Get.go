@@ -1,9 +1,11 @@
 package sqlite
 
 import (
+	"errors"
 	"fmt"
 
 	"github.com/zhenqiiii/BlogSite/backend/model"
+	"gorm.io/gorm"
 )
 
 // Get: 查询函数集合
@@ -30,5 +32,21 @@ func GetTotal() (int, error) {
 		return 0, result.Error
 	}
 	return int(result.RowsAffected), nil
+
+}
+
+// GetArticleByID：通过id获取整篇文章
+func GetArticleByID(id int64) (article *model.Article, err error) {
+	// 内联条件
+	// 如果没查到该id的文章，由于GORM查询时添加了LIMIT 1条件，所以会报错：result.Error
+
+	result := db.Where("p_id = ?", id).First(&article)
+	if errors.Is(result.Error, gorm.ErrRecordNotFound) {
+
+	}
+	if err = result.Error; err != nil {
+		return nil, err
+	}
+	return article, nil
 
 }

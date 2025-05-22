@@ -22,7 +22,7 @@ func HomeHandler() gin.HandlerFunc {
 			c.JSON(http.StatusBadRequest, gin.H{
 				"code": constants.FaultParams,
 				"msg":  "Check the params again",
-				"err":  err,
+				"err":  err.Error(),
 			})
 			return
 		}
@@ -32,7 +32,7 @@ func HomeHandler() gin.HandlerFunc {
 			c.JSON(http.StatusInternalServerError, gin.H{
 				"code": constants.InternalError,
 				"msg":  "Internal Server Error",
-				"err":  err,
+				"err":  err.Error(),
 			})
 			return
 		}
