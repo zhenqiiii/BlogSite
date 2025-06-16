@@ -31,6 +31,8 @@
     /* border: 1px solid grey; */
     font-size: clamp(14px, 1.2vw, 20px);
     text-align: left;
+    color: inherit;
+    text-decoration: none;
 }
 
 .date{

@@ -17,14 +17,14 @@ const router = createRouter(
       {path: '/', redirect: '/home'},
       {path: '/home', component: Home},
       {path: '/history', component: History},
-      {path: '/article/:id', component: Article},
+      {path: '/article/:id', name:'article', component: Article},
       {path: '/tag/:tag', component: Tag},
       {
         path: '/admin', 
         component: Admin,
         children: [
           {
-            // 文章管理
+            // 文章管理: 查看/修改/删除
             path: 'management',
             component: Management,
           },

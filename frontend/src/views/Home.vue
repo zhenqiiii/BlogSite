@@ -3,6 +3,8 @@ import { Edit, HomeFilled, Message, Notebook, Pointer, UserFilled } from '@eleme
 import { inputEmits, SIZE_INJECTION_KEY } from 'element-plus';
 import {ref} from 'vue';
 import '../assets/style/Home.css';
+import { RouterView } from 'vue-router';
+import { id } from 'element-plus/es/locale/index.mjs';
 
 // =========================顶部导航栏=====================================================
 
@@ -12,6 +14,8 @@ const article_gap = ref(20);
 const handleCurrentChange = (val) => {
   console.log(`current page: ${val}`)
 }
+
+const vid = ref(183)
 // todo：编写文章数组，完成文章显示逻辑---完成
 // 文章包括：标题、摘要、标签、日期、阅读量、阅读时长
 // 若设置每页十篇文章，那么文章数组大小为10，每次点击翻页按钮都更新文章数组
@@ -143,9 +147,9 @@ const article_list = ref([
         <el-row class="article_card_header" justify="space-between">
           <!-- 标题 -->
           <el-col class="article_title" span="12">
-            <el-link href="" class="title" target="_self">
+            <router-link :to="{name: 'article', params: {id:123}}" class="title" target="_self">
               {{ article.title }}
-            </el-link>
+            </router-link>
           </el-col>
           <!-- 日期 -->
           <el-col class="date" span="12">

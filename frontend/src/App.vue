@@ -45,10 +45,7 @@ const input = ref('');
       <el-container class="sub1">
         <!-- 主界面 -->
         <el-main class="main">
-          <!-- 文章卡片:使用el-space排列el-card -->
-          <div>
-            <router-view></router-view>
-          </div>
+          <router-view></router-view>
         </el-main>
         <!-- 侧边栏 -->
         <el-aside class="aside" >
@@ -113,7 +110,7 @@ const input = ref('');
               <el-card class="category_card">
                 <template #header>
                   <div>
-                    <span>Category</span>
+                    <span>Tags</span>
                   </div>
                 </template>
                 <div class="tag_container">
